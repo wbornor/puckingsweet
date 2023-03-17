@@ -42,7 +42,7 @@ public class EntryServlet extends HttpServlet {
 	public void init(ServletConfig conf) throws ServletException {
 		try {
 			//InputStream is = conf.getServletContext().getResourceAsStream("/WEB-INF/AwsCredentials.properties");
-			String creds = "accessKey=1X9P1370KYQRBJQVHQG2" + '\n' + "secretKey=8B29NGafAVmRrwOr0BOZmPC5DJUnCJtfqNcrGZA/";
+			String creds = "";
 			InputStream is = new ByteArrayInputStream(creds.getBytes());
 			PropertiesCredentials props = new PropertiesCredentials(is);
 			conf.getServletContext().setAttribute("AwsCredentials.properties", props);
